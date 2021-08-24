@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		96B082CF26D367C4000E7FC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B082CE26D367C4000E7FC2 /* AppDelegate.swift */; };
 		96B082D126D367C4000E7FC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B082D026D367C4000E7FC2 /* SceneDelegate.swift */; };
-		96B082D326D367C4000E7FC2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B082D226D367C4000E7FC2 /* ContentView.swift */; };
 		96B082D526D367C7000E7FC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96B082D426D367C7000E7FC2 /* Assets.xcassets */; };
 		96B082D826D367C7000E7FC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96B082D726D367C7000E7FC2 /* Preview Assets.xcassets */; };
 		96B082DB26D367C7000E7FC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B082D926D367C7000E7FC2 /* LaunchScreen.storyboard */; };
 		96B082E626D367C8000E7FC2 /* Instagram_ClonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B082E526D367C8000E7FC2 /* Instagram_ClonTests.swift */; };
 		96B082F126D367C8000E7FC2 /* Instagram_ClonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B082F026D367C8000E7FC2 /* Instagram_ClonUITests.swift */; };
+		96B0830126D36B46000E7FC2 /* StarterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B0830026D36B46000E7FC2 /* StarterScreen.swift */; };
+		96B0830326D36B78000E7FC2 /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B0830226D36B77000E7FC2 /* SignInScreen.swift */; };
+		96B0830626D36D97000E7FC2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B0830526D36D97000E7FC2 /* Utils.swift */; };
+		96B0830826D37611000E7FC2 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B0830726D37611000E7FC2 /* SignUpScreen.swift */; };
+		96B0835226D399EE000E7FC2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96B0835426D399EE000E7FC2 /* Localizable.strings */; };
+		96B0835826D39DE4000E7FC2 /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96B0835726D39DA6000E7FC2 /* Billabong.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +43,6 @@
 		96B082CB26D367C4000E7FC2 /* Instagram_Clon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram_Clon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B082CE26D367C4000E7FC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96B082D026D367C4000E7FC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		96B082D226D367C4000E7FC2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		96B082D426D367C7000E7FC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96B082D726D367C7000E7FC2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		96B082DA26D367C7000E7FC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,14 @@
 		96B082EC26D367C8000E7FC2 /* Instagram_ClonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Instagram_ClonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B082F026D367C8000E7FC2 /* Instagram_ClonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instagram_ClonUITests.swift; sourceTree = "<group>"; };
 		96B082F226D367C8000E7FC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96B0830026D36B46000E7FC2 /* StarterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterScreen.swift; sourceTree = "<group>"; };
+		96B0830226D36B77000E7FC2 /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
+		96B0830526D36D97000E7FC2 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		96B0830726D37611000E7FC2 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
+		96B0835326D399EE000E7FC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		96B0835526D39A77000E7FC2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		96B0835626D39A77000E7FC2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		96B0835726D39DA6000E7FC2 /* Billabong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Billabong.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +111,11 @@
 		96B082CD26D367C4000E7FC2 /* Instagram_Clon */ = {
 			isa = PBXGroup;
 			children = (
-				96B082CE26D367C4000E7FC2 /* AppDelegate.swift */,
+				96B082FF26D36AAC000E7FC2 /* screens */,
+				96B082FE26D36A7E000E7FC2 /* apputills */,
+				96B0830426D36D7D000E7FC2 /* Utils */,
 				96B082D026D367C4000E7FC2 /* SceneDelegate.swift */,
-				96B082D226D367C4000E7FC2 /* ContentView.swift */,
-				96B082D426D367C7000E7FC2 /* Assets.xcassets */,
-				96B082D926D367C7000E7FC2 /* LaunchScreen.storyboard */,
+				96B082CE26D367C4000E7FC2 /* AppDelegate.swift */,
 				96B082DC26D367C7000E7FC2 /* Info.plist */,
 				96B082D626D367C7000E7FC2 /* Preview Content */,
 			);
@@ -134,6 +146,35 @@
 				96B082F226D367C8000E7FC2 /* Info.plist */,
 			);
 			path = Instagram_ClonUITests;
+			sourceTree = "<group>";
+		};
+		96B082FE26D36A7E000E7FC2 /* apputills */ = {
+			isa = PBXGroup;
+			children = (
+				96B0835726D39DA6000E7FC2 /* Billabong.ttf */,
+				96B0835426D399EE000E7FC2 /* Localizable.strings */,
+				96B082D926D367C7000E7FC2 /* LaunchScreen.storyboard */,
+				96B082D426D367C7000E7FC2 /* Assets.xcassets */,
+			);
+			path = apputills;
+			sourceTree = "<group>";
+		};
+		96B082FF26D36AAC000E7FC2 /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				96B0830026D36B46000E7FC2 /* StarterScreen.swift */,
+				96B0830226D36B77000E7FC2 /* SignInScreen.swift */,
+				96B0830726D37611000E7FC2 /* SignUpScreen.swift */,
+			);
+			path = screens;
+			sourceTree = "<group>";
+		};
+		96B0830426D36D7D000E7FC2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				96B0830526D36D97000E7FC2 /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +262,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 96B082C226D367C4000E7FC2;
 			productRefGroup = 96B082CC26D367C4000E7FC2 /* Products */;
@@ -240,7 +282,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				96B082DB26D367C7000E7FC2 /* LaunchScreen.storyboard in Resources */,
+				96B0835226D399EE000E7FC2 /* Localizable.strings in Resources */,
 				96B082D826D367C7000E7FC2 /* Preview Assets.xcassets in Resources */,
+				96B0835826D39DE4000E7FC2 /* Billabong.ttf in Resources */,
 				96B082D526D367C7000E7FC2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,9 +310,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96B0830626D36D97000E7FC2 /* Utils.swift in Sources */,
 				96B082CF26D367C4000E7FC2 /* AppDelegate.swift in Sources */,
+				96B0830326D36B78000E7FC2 /* SignInScreen.swift in Sources */,
 				96B082D126D367C4000E7FC2 /* SceneDelegate.swift in Sources */,
-				96B082D326D367C4000E7FC2 /* ContentView.swift in Sources */,
+				96B0830126D36B46000E7FC2 /* StarterScreen.swift in Sources */,
+				96B0830826D37611000E7FC2 /* SignUpScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,8 +355,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				96B082DA26D367C7000E7FC2 /* Base */,
+				96B0835526D39A77000E7FC2 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		96B0835426D399EE000E7FC2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96B0835326D399EE000E7FC2 /* en */,
+				96B0835626D39A77000E7FC2 /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -319,6 +376,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -380,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
