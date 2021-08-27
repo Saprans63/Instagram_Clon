@@ -18,6 +18,7 @@ struct HomeUploadScreen: View {
     
     var Actions : ActionSheet{
         let title = "Action"
+      
         return ActionSheet(title: Text(title), buttons: [
             .default(Text("Pick Photo"), action: {
                  self.soutceType = .photoLibrary

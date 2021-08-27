@@ -8,8 +8,29 @@
 import SwiftUI
 
 struct HomeLikesScreen: View {
+    
+    @ObservedObject var viewModel = LikeViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            ZStack{
+                List{
+                    ForEach(viewModel.items, id:\.self){ item in
+                        PostCell(post: item).listRowInsets(EdgeInsets())
+                        
+                    }
+                }
+                .listStyle(PlainListStyle())
+            }
+           
+            
+            .navigationBarTitle("Likes", displayMode: .inline)
+            .onAppear{
+                viewModel.apiPostList {
+                    print(viewModel.items.count)
+                }
+            }
+        }
     }
 }
 
