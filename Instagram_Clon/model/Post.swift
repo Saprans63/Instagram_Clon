@@ -22,3 +22,4 @@ struct Post : Hashable{
         self.imgUrl = imgUrl
     }
 }
+
