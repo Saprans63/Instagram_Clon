@@ -10,8 +10,42 @@ import SwiftUI
 
 struct SignInScreen: View {
     
-    @State var email = ""
-    @State var password = ""
+    @ObservedObject var viewModel = SignInViewModel()
+    @ObservedObject var vpassw = VPASSW()
+    @ObservedObject var vemail = VEMAIL()
+  
+    @State private var isEmailValid1 : Bool = true
+    @State private var isEmailValid2 : Bool = true
+    @State var isLoading = false
+    @State var email = ""         //"kozimov@gmail.com"
+    @State var password = ""     //"123qwe"
+    
+    func doSignIn() {
+        
+        let zzz = vemail.textFieldValidatorEmail(haqida: email)
+        if zzz == true {
+             print("email to'g'ri")
+            self.isEmailValid1 = true  }
+        else {
+            email = ""
+            print("email noto'g'ri")
+            self.isEmailValid1 = false  }
+       
+        let ooo = vpassw.validpassword(mypassword: password)
+        if ooo == true {
+             print("Password to'g'ri")
+            self.isEmailValid2 = true}
+        else {
+            password = ""
+            print("Password noto'g'ri")
+            self.isEmailValid2 = false }
+        
+            viewModel.apiSignIn(email: email, password: password, completion: {
+            result in
+            if !result{
+            //
+            }   })
+                            }
     
     var body: some View {
         
@@ -25,11 +59,16 @@ struct SignInScreen: View {
                         .font(Font.custom("Billabong", size: 45))
                     
                     TextField("email", text: $email)
-                        .frame(height: 50).padding(.leading, 10)
-                        .foregroundColor(.white)
-                        .background(Color .white.opacity(0.4))
-                        .cornerRadius(8)
-                        .padding(.top,10)
+                    .frame(height: 50).padding(.leading, 10)
+                    .foregroundColor(.white)
+                    .background(Color .white.opacity(0.4))
+                    .cornerRadius(8)
+                    .padding(.top,10)
+                            if !self.isEmailValid1 {
+                               Text("email_v")
+                                   .font(.callout)
+                                   .foregroundColor(Color.red)
+                           }
                     
                     TextField("password", text: $password)
                         .frame(height: 50).padding(.leading, 10)
@@ -37,9 +76,15 @@ struct SignInScreen: View {
                         .background(Color .white.opacity(0.4))
                         .cornerRadius(8)
                         .padding(.top,10)
+                           if !self.isEmailValid2 {
+                               Text("password_v")
+                                   .font(.callout)
+                                   .foregroundColor(Color.red)
+                           }
+                    
                     
                     Button(action: {
-                        
+                        doSignIn()
                     }, label: {
                         Text("sign_in")
                             .foregroundColor(.white)
@@ -66,6 +111,10 @@ struct SignInScreen: View {
                     }.frame(maxWidth: .infinity, maxHeight: 70)
                     
                 }.padding()
+                
+                if viewModel.isLoading{
+                    ProgressView()
+                }
             }
             .edgesIgnoringSafeArea(.all)
         }

@@ -26,7 +26,7 @@ struct HomeProfilesScreen: View {
     @State private var isImagePicerDisplay = false
     @State var caption = ""
     @State var isShit = false
-    
+    @State private var showingAlert = false
     var Actions : ActionSheet{
         let title = "Action"
       
@@ -80,11 +80,11 @@ struct HomeProfilesScreen: View {
 
                     }
                     
-                    Text("Azamjon Kozimov")
+                    Text("post_name")
                         .font(.system(size: 17))
                         .fontWeight(.medium)
                         .padding(.top,15)
-                    Text("kozimovazamjon@gmail.com")
+                    Text("post_status")
                         .font(.system(size: 17))
                         .foregroundColor(.gray)
                         .padding(.top,3)
@@ -175,9 +175,15 @@ struct HomeProfilesScreen: View {
             }
             .navigationBarItems(trailing:
                                     Button(action: {
-                                        
+                                        self.showingAlert = true
                                     }, label: {
                                        Image(systemName: "pip.exit")
+                                    }).alert(isPresented: $showingAlert, content: {
+                                        let title = "sign_out"
+                                        let message = "do_you"
+                                        return Alert(title: Text(title), message: Text(message), primaryButton: .destructive(Text("Confirm"), action: {
+                                            viewModel.apiSignOut()
+                                        }), secondaryButton: .cancel())
                                     })
             )
             .navigationBarTitle("Profile", displayMode: .inline)

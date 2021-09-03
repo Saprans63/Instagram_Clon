@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StarterScreen: View {
-    @EnvironmentObject var session: SessionSrore
+    @EnvironmentObject var session: SessionStore
     var body: some View {
         VStack{
         if self.session.session != nil{

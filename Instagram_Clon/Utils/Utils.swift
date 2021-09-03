@@ -23,3 +23,28 @@ extension UIScreen{
     static let height = UIScreen.main.bounds.size.height
     static let size = UIScreen.main.bounds.size
 }
+
+class VEMAIL : ObservableObject{
+func textFieldValidatorEmail(haqida: String) -> Bool {
+   // if haqida.count > 100 {
+     //   return false
+    //}
+    let emailFormat = "[A-Z0-9a-z.-_]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
+   
+    let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailFormat)
+    return emailPredicate.evaluate(with: haqida)
+}
+}
+
+
+class VPASSW : ObservableObject{
+func validpassword(mypassword : String) -> Bool
+    {
+        let passwordreg =  ("^(?=.*[a-z])(?=.*[$@$#!%*?&])(?=.*[A-Z]).{6,}$")
+        let passwordtesting = NSPredicate(format: "SELF MATCHES %@", passwordreg)
+        return passwordtesting.evaluate(with: mypassword)
+    }
+}
+
+
+

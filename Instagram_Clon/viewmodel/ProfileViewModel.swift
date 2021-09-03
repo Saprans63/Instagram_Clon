@@ -26,4 +26,9 @@ func apiPostList(completion: @escaping () -> () ) {
     isLoading = false
     completion()
 }
+    
+    func apiSignOut() {
+        SessionStore().signOut()
+    }
+    
 }
