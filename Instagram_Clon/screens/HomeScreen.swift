@@ -8,17 +8,16 @@
 import SwiftUI
 
 struct HomeScreen: View {
-    
-    @State private var tabSeliction = 0
+    @State private var tabSelection = 0
     
     var body: some View {
-        
-        TabView(selection: $tabSeliction) {
-            HomeFeedScreen(tabSeliction: $tabSeliction)
-                .font(.system(size: 30, weight: .bold, design: .rounded))
-                .tabItem {
-                    Image(systemName: "house")
-                }.tag(0)
+        TabView(selection: $tabSelection) {
+            
+            HomeFeedScreen(tabSeliction: $tabSelection)
+            .font(.system(size: 30, weight: .bold, design: .rounded))
+            .tabItem {
+                Image(systemName: "house")
+            }.tag(0)
             
             HomeSearchScreen()
                 .font(.system(size: 30, weight: .bold, design: .rounded))
@@ -26,8 +25,7 @@ struct HomeScreen: View {
                     Image(systemName: "magnifyingglass")
                 }.tag(1)
             
-            
-            HomeUploadScreen(tabSeliction: $tabSeliction)
+            HomeUploadScreen(tabSeliction: $tabSelection)
                 .font(.system(size: 30, weight: .bold, design: .rounded))
                 .tabItem {
                     Image(systemName: "camera")
@@ -39,18 +37,16 @@ struct HomeScreen: View {
                     Image(systemName: "heart")
                 }.tag(3)
             
-            
-            HomeProfilesScreen()
+            HomeProfileScreen()
                 .font(.system(size: 30, weight: .bold, design: .rounded))
                 .tabItem {
                     Image(systemName: "person")
                 }.tag(4)
-            
-        }.accentColor(Utils.color2)
-        .onAppear(){
+        }
+        .accentColor(Utils.color2)
+        .onAppear() {
             UITabBar.appearance().barTintColor = .white
         }
-        
     }
 }
 

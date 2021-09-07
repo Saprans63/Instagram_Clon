@@ -70,7 +70,7 @@ struct PostCell: View {
             HStack{
                 Text("Kozimov Azamjon 1992 yil")
                     .foregroundColor(.black)
-                    .font(.system(size: 16))
+                    .font(.system(size: 17))
                 Spacer()
             }.padding(.all,15)
         }

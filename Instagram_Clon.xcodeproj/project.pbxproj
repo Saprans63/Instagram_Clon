@@ -34,6 +34,8 @@
 		96B5B4FA26D8AD3800FCBC06 /* LikeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5B4F926D8AD3800FCBC06 /* LikeViewModel.swift */; };
 		96BACB5126D5F32700008CC9 /* ImageRicerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BACB5026D5F32700008CC9 /* ImageRicerView.swift */; };
 		96BACB5326D5F69500008CC9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BACB5226D5F69500008CC9 /* Coordinator.swift */; };
+		96C2139A26E71F34009ACDF4 /* DatabaseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C2139926E71F34009ACDF4 /* DatabaseStore.swift */; };
+		96C2139C26E72E20009ACDF4 /* StorageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C2139B26E72E20009ACDF4 /* StorageStore.swift */; };
 		96CF99C826D4B1AD00E90BBF /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CF99C726D4B1AD00E90BBF /* HomeScreen.swift */; };
 		96CF99CB26D4B21400E90BBF /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CF99CA26D4B21400E90BBF /* SessionStore.swift */; };
 		96CF99CE26D4B29B00E90BBF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CF99CD26D4B29B00E90BBF /* User.swift */; };
@@ -102,6 +104,8 @@
 		96B5B4F926D8AD3800FCBC06 /* LikeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeViewModel.swift; sourceTree = "<group>"; };
 		96BACB5026D5F32700008CC9 /* ImageRicerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRicerView.swift; sourceTree = "<group>"; };
 		96BACB5226D5F69500008CC9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		96C2139926E71F34009ACDF4 /* DatabaseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseStore.swift; sourceTree = "<group>"; };
+		96C2139B26E72E20009ACDF4 /* StorageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageStore.swift; sourceTree = "<group>"; };
 		96CF99C726D4B1AD00E90BBF /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		96CF99CA26D4B21400E90BBF /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		96CF99CD26D4B29B00E90BBF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -289,6 +293,8 @@
 			isa = PBXGroup;
 			children = (
 				96CF99CA26D4B21400E90BBF /* SessionStore.swift */,
+				96C2139926E71F34009ACDF4 /* DatabaseStore.swift */,
+				96C2139B26E72E20009ACDF4 /* StorageStore.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -557,12 +563,14 @@
 				96BACB5326D5F69500008CC9 /* Coordinator.swift in Sources */,
 				96B5B4F326D897D800FCBC06 /* FeedViewModel.swift in Sources */,
 				96CF99D626D4B9D100E90BBF /* HomeLikesScreen.swift in Sources */,
+				96C2139C26E72E20009ACDF4 /* StorageStore.swift in Sources */,
 				96CF99D026D4B8E600E90BBF /* HomeFeedScreen.swift in Sources */,
 				96B0830626D36D97000E7FC2 /* Utils.swift in Sources */,
 				96B082CF26D367C4000E7FC2 /* AppDelegate.swift in Sources */,
 				96BACB5126D5F32700008CC9 /* ImageRicerView.swift in Sources */,
 				96B0830326D36B78000E7FC2 /* SignInScreen.swift in Sources */,
 				96B082D126D367C4000E7FC2 /* SceneDelegate.swift in Sources */,
+				96C2139A26E71F34009ACDF4 /* DatabaseStore.swift in Sources */,
 				96B0830126D36B46000E7FC2 /* StarterScreen.swift in Sources */,
 				96CF99CE26D4B29B00E90BBF /* User.swift in Sources */,
 				96CF99C826D4B1AD00E90BBF /* HomeScreen.swift in Sources */,
