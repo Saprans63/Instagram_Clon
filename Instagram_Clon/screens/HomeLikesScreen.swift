@@ -8,27 +8,27 @@
 import SwiftUI
 
 struct HomeLikesScreen: View {
-    
-    @ObservedObject var viewModel = LikeViewModel()
+    @EnvironmentObject var session: SessionStore
+    @ObservedObject var viewModel = LikesViewModel()
     
     var body: some View {
         NavigationView{
             ZStack{
                 List{
                     ForEach(viewModel.items, id:\.self){ item in
-                        PostCell(post: item).listRowInsets(EdgeInsets())
-                        
+                        if let uid = session.session?.uid! {
+                            LikePostCell(uid:uid, viewModel: viewModel, post: item)
+                                .listRowInsets(EdgeInsets())
+                        }
                     }
                 }
                 .listStyle(PlainListStyle())
             }
-           
             
-            .navigationBarTitle("Likes", displayMode: .inline)
-            .onAppear{
-                viewModel.apiPostList {
-                    print(viewModel.items.count)
-                }
+            .navigationBarTitle("Likes",displayMode: .inline)
+        }.onAppear{
+            if let uid = session.session?.uid! {
+              //  self.viewModel.apiLikesList(uid: uid)
             }
         }
     }

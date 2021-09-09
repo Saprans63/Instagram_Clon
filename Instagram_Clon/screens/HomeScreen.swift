@@ -4,7 +4,6 @@
 //
 //  Created by Apple user on 24/08/21.
 //
-
 import SwiftUI
 
 struct HomeScreen: View {
@@ -13,7 +12,7 @@ struct HomeScreen: View {
     var body: some View {
         TabView(selection: $tabSelection) {
             
-            HomeFeedScreen(tabSeliction: $tabSelection)
+            HomeFeedScreen(tabSelection: $tabSelection)
             .font(.system(size: 30, weight: .bold, design: .rounded))
             .tabItem {
                 Image(systemName: "house")
@@ -25,7 +24,7 @@ struct HomeScreen: View {
                     Image(systemName: "magnifyingglass")
                 }.tag(1)
             
-            HomeUploadScreen(tabSeliction: $tabSelection)
+            HomeUploadScreen(tabSelection: $tabSelection)
                 .font(.system(size: 30, weight: .bold, design: .rounded))
                 .tabItem {
                     Image(systemName: "camera")

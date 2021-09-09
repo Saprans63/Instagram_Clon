@@ -173,9 +173,9 @@ struct HomeProfileScreen: View {
                     ScrollView{
                         LazyVGrid(columns: columns,spacing: 10){
                             ForEach(viewModel.items, id:\.self){ item in
-                               // if let uid = session.session?.uid! {
-                                    MyPostCell(post: item, length: postSize())
-                                //}
+                                if let uid = session.session?.uid! {
+                            MyPostCell(uid:uid,viewModel: viewModel,post: item, length: postSize())
+                                                               }
                             }
                         }
                         
@@ -203,10 +203,10 @@ struct HomeProfileScreen: View {
             .navigationBarTitle("Profile",displayMode: .inline)
         }.onAppear{
             let uid = (session.session?.uid)!
-           // viewModel.apiPostList(uid: uid)
+            viewModel.apiPostList(uid: uid)
             viewModel.apiLoadUser(uid: uid)
-           // viewModel.apiLoadFollowing(uid: uid)
-           // viewModel.apiLoadFollowers(uid: uid)
+            viewModel.apiLoadFollowing(uid: uid)
+            viewModel.apiLoadFollowers(uid: uid)
             
         }
     }

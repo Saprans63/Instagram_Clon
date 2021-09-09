@@ -4,12 +4,11 @@
 //
 //  Created by Apple user on 24/08/21.
 //
-
 import SwiftUI
 
 struct HomeFeedScreen: View {
-    
-    @Binding var tabSeliction: Int
+    @Binding var tabSelection: Int
+    @EnvironmentObject var session: SessionStore
     @ObservedObject var viewModel = FeedViewModel()
     
     var body: some View {
@@ -17,24 +16,30 @@ struct HomeFeedScreen: View {
             ZStack{
                 List{
                     ForEach(viewModel.items, id:\.self){ item in
-                        PostCell(post: item).listRowInsets(EdgeInsets())
-                        
+                        if let uid = session.session?.uid! {
+                            FeedPostCell(uid:uid, viewModel: viewModel, post: item)
+                                .listRowInsets(EdgeInsets())
+                        }
                     }
                 }
                 .listStyle(PlainListStyle())
+                
+                if viewModel.isLoading {
+                    ProgressView()
+                }
             }
+            
             .navigationBarItems(trailing:
                                     Button(action: {
-                                        self.tabSeliction = 2
+                                        self.tabSelection = 2
                                     }, label: {
                                         Image(systemName: "camera")
                                     })
             )
-            .navigationBarTitle("Instagam", displayMode: .inline)
-            .onAppear{
-                viewModel.apiPostList {
-                    print(viewModel.items.count)
-                }
+            .navigationBarTitle("Instagram",displayMode: .inline)
+        }.onAppear{
+            if let uid = session.session?.uid! {
+                viewModel.apiFeedList(uid: uid)
             }
         }
     }
@@ -42,6 +47,6 @@ struct HomeFeedScreen: View {
 
 struct HomeFeedScreen_Previews: PreviewProvider {
     static var previews: some View {
-        HomeFeedScreen(tabSeliction: .constant(0))
+        HomeFeedScreen(tabSelection: .constant(0))
     }
 }
