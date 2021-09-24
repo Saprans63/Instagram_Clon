@@ -196,10 +196,10 @@
 				96CF99CC26D4B28A00E90BBF /* model */,
 				96CF99C926D4B1ED00E90BBF /* service */,
 				96B082FF26D36AAC000E7FC2 /* screens */,
+				96B0830426D36D7D000E7FC2 /* utils */,
 				96B082FE26D36A7E000E7FC2 /* apputills */,
-				96B0830426D36D7D000E7FC2 /* Utils */,
-				96B082D026D367C4000E7FC2 /* SceneDelegate.swift */,
 				96B082CE26D367C4000E7FC2 /* AppDelegate.swift */,
+				96B082D026D367C4000E7FC2 /* SceneDelegate.swift */,
 				96D8777A26DF4F9A00F5EA49 /* GoogleService-Info.plist */,
 				96B082DC26D367C7000E7FC2 /* Info.plist */,
 				96B082D626D367C7000E7FC2 /* Preview Content */,
@@ -260,14 +260,14 @@
 			path = screens;
 			sourceTree = "<group>";
 		};
-		96B0830426D36D7D000E7FC2 /* Utils */ = {
+		96B0830426D36D7D000E7FC2 /* utils */ = {
 			isa = PBXGroup;
 			children = (
 				96B0830526D36D97000E7FC2 /* Utils.swift */,
 				96BACB5026D5F32700008CC9 /* ImageRicerView.swift */,
 				96BACB5226D5F69500008CC9 /* Coordinator.swift */,
 			);
-			path = Utils;
+			path = utils;
 			sourceTree = "<group>";
 		};
 		96B5B4F126D8978F00FCBC06 /* viewmodel */ = {

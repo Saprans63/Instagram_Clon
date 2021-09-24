@@ -1,4 +1,5 @@
 
+
 import SwiftUI
 import SDWebImageSwiftUI
 
@@ -126,7 +127,7 @@ struct HomeProfileScreen: View {
                             .background(Color.gray.opacity(0.5))
                         
                         VStack{
-                            Text("4,235")
+                            Text(String(viewModel.followers.count))
                                 .foregroundColor(.black)
                                 .font(.system(size: 17))
                                 .fontWeight(.medium)
@@ -139,7 +140,7 @@ struct HomeProfileScreen: View {
                             .background(Color.gray.opacity(0.5))
                         
                         VStack{
-                            Text("4,235")
+                            Text(String(viewModel.following.count))
                                 .foregroundColor(.black)
                                 .font(.system(size: 17))
                                 .fontWeight(.medium)
@@ -174,8 +175,8 @@ struct HomeProfileScreen: View {
                         LazyVGrid(columns: columns,spacing: 10){
                             ForEach(viewModel.items, id:\.self){ item in
                                 if let uid = session.session?.uid! {
-                            MyPostCell(uid:uid,viewModel: viewModel,post: item, length: postSize())
-                                                               }
+                                    MyPostCell(uid:uid,viewModel: viewModel,post: item, length: postSize())
+                                }
                             }
                         }
                         

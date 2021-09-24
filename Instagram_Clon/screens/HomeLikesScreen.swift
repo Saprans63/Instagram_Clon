@@ -28,7 +28,7 @@ struct HomeLikesScreen: View {
             .navigationBarTitle("Likes",displayMode: .inline)
         }.onAppear{
             if let uid = session.session?.uid! {
-              //  self.viewModel.apiLikesList(uid: uid)
+               self.viewModel.apiLikesList(uid: uid)
             }
         }
     }

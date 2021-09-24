@@ -4,11 +4,10 @@
 //
 //  Created by Apple user on 24/08/21.
 //
-
 import SwiftUI
 
 struct HomeSearchScreen: View {
-    @EnvironmentObject var seesion: SessionStore
+    @EnvironmentObject var session: SessionStore
     @ObservedObject var viewModel = SearchViewModel()
     @State var keyword = ""
     
@@ -20,27 +19,27 @@ struct HomeSearchScreen: View {
                         .padding(.leading,15).padding(.trailing,15)
                         .frame(height: 45)
                         .font(Font.system(size: 16))
-                        .overlay(RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.black.opacity(0.5), lineWidth: 0.5))
-                        .padding(.leading, 20).padding(.trailing,20)
-                        .padding(.top,20)
+                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.black.opacity(0.5),lineWidth: 0.5))
+                        .padding(.leading,20).padding(.trailing,20).padding(.top, 20)
                     
                     List{
                         ForEach(viewModel.items, id:\.self){ item in
-                            UserCell(user: item)
+                            let uid = (session.session?.uid)!
+                            UserCell(uid: uid, user: item, viewModel: viewModel)
                                 .listRowInsets(EdgeInsets())
                                 .buttonStyle(PlainButtonStyle())
                         }
                     }
                     .listStyle(PlainListStyle())
                 }
-                if viewModel.isLoading{
+                
+                if viewModel.isLoading {
                     ProgressView()
                 }
             }
-            .navigationBarTitle("Search", displayMode: .inline)
+            .navigationBarTitle("Search",displayMode: .inline)
         }.onAppear{
-            let uid = (seesion.session?.uid)!
+            let uid = (session.session?.uid)!
             viewModel.apiUserList(uid: uid, keyword: keyword)
         }
     }

@@ -5,17 +5,20 @@
 //  Created by Apple user on 24/08/21.
 //
 
+
 import Foundation
 import Combine
 import Firebase
 
 class SessionStore: ObservableObject {
-    
     var didChange = PassthroughSubject<SessionStore, Never>()
     @Published var session: User? { didSet { self.didChange.send(self) }}
     var handle: AuthStateDidChangeListenerHandle?
 
     func listen () {
+        let idfv = UIDevice.current.identifierForVendor
+        //print(idfv)
+        
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
             if let user = user {
                 print("Got user: \(user)")

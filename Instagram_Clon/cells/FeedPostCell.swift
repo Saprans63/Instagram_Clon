@@ -86,7 +86,7 @@ struct FeedPostCell: View {
                     viewModel.apiLikePost(uid: uid, post: post)
                 }, label: {
                     if post.isLiked!{
-                        Image("ic_like_on").resizable().frame(height:26).frame(width:26).background(Color.red)
+                        Image("ic_like_on").resizable().frame(height:26).frame(width:26)
                     }else{
                         Image("ic_like_off").resizable().frame(height:26).frame(width:26)
                     }

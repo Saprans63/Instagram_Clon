@@ -18,15 +18,15 @@ struct SignUpScreen: View {
     @State private var isEmailValid1 : Bool = true
     @State private var isEmailValid2 : Bool = true
     
-    @State var fullname = ""    //"azamjon"
-    @State var email =  ""      //"kozimov@gmail.com"
-    @State var password = ""      //"123qwe"
+    @State var fullname = ""
+    @State var email =  ""
+    @State var password = ""
     @State var cpassword = ""
     
     func doSignUP() {
         
-        let zzz = vemail.textFieldValidatorEmail(haqida: email)
-        if zzz == true {
+        let myEmail = vemail.textFieldValidatorEmail(myemail: email)
+        if myEmail == true {
              print("email to'g'ri")
             self.isEmailValid1 = true  }
         else {
@@ -34,8 +34,8 @@ struct SignUpScreen: View {
             print("email noto'g'ri")
             self.isEmailValid1 = false  }
        
-        let ooo = vpassw.validpassword(mypassword: password)
-        if ooo == true {
+        let myPassword = vpassw.validpassword(mypassword: password)
+        if myPassword == true {
              print("Password to'g'ri")
             self.isEmailValid2 = true}
         else {
